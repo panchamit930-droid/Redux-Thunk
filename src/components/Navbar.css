@@ -1,0 +1,15 @@
+ul{
+    /* background-color: cadetblue; */
+    background: linear-gradient(to right,rgb(215, 182, 247),rgb(129, 193, 196));
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+}
+
+li{
+    list-style: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
