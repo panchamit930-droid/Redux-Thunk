@@ -1,6 +1,6 @@
 ul{
     /* background-color: cadetblue; */
-    background: linear-gradient(to right,rgb(215, 182, 247),rgb(129, 193, 196));
+    background: linear-gradient(to right,rgb(209, 172, 245),rgb(129, 193, 196));
     display: flex;
     gap: 30px;
     padding: 20px;
