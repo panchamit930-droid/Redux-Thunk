@@ -28,6 +28,6 @@ const Tasks = () => {
       </div>
     </div>
   );
-};
+};      
 
 export default Tasks;
