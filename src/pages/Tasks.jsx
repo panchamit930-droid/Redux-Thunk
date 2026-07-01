@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTasksFromServer } from "../slice/taskListSlice";
+import { getTasksFromServer , deleteTaskFromServer} from "../slice/taskListSlice";
 
 const Tasks = () => {
   const { taskLists, is_loading, error } = useSelector((state) => state.tasks);
@@ -14,6 +14,11 @@ const Tasks = () => {
     dispatch(getTasksFromServer(taskLists));
   }, []);
 
+  const handleDelete=(id)=>{
+    const is_confirm = window.confirm("Are you sure you want to delete this task?")
+    dispatch(deleteTaskFromServer(id))
+  }
+
   return (
     <div>
       <h1>Tasks</h1> <hr />
@@ -23,6 +28,7 @@ const Tasks = () => {
             <p>{item.id}</p>
             <p>{item.title}</p>
             <p>{item.description}</p> <hr />
+            <button onClick={()=> handleDelete(item.id)}>Delete</button>
           </div>
         ))}
       </div>
